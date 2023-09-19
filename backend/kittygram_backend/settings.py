@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'YOUR developing key')
 
 DEBUG = env.bool('DEBUG_PROD', default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['158.160.74.51', '127.0.0.1', 'localhost', 'kittygram.onthewifi.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
