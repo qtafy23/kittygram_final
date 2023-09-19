@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 
 import environ
+from djnago.core.management.utils import get_random_secret_key
 from dotenv import load_dotenv
 
 
@@ -11,7 +12,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', default=get_random_secret_key())
 
 DEBUG = env.bool('DEBUG_PROD', default=False)
 
