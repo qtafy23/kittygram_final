@@ -22,9 +22,13 @@ cd kittygram_final
 
 ##### Выполнить миграции и собрать статику:
 
-`docker compose -f docker-compose.production.yml exec backend python manage.py migrate`
-`docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic`
-`docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/`
+```
+docker compose -f docker-compose.production.yml exec backend python manage.py migrate
+
+docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
+
+docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/
+```
 
 
 ### Примеры запросов к API
