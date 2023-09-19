@@ -14,18 +14,13 @@ git clone git@github.com:qtafy23/kittygram_final;
 
 cd kittygram_final
 ```
-##### Установить докер и запустить проект в контейнере
+##### Запустить проект в контейнере
 
-Инструкция по установке: [Docker](https://docs.docker.com/installation/mac/)
-
-`docker compose -f docker-compose.production.yml up`
+`docker compose up`
 
 ##### Выполнить миграции и собрать статику:
 
-`docker compose -f docker-compose.production.yml exec backend python manage.py migrate`
-`docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic`
-`docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/`
-
+`docker compose exec backend python manage.py migrate`
 
 ### Примеры запросов к API
 ```
