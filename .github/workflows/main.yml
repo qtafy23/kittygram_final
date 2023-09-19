@@ -142,7 +142,15 @@ jobs:
       - build_and_push_to_docker_hub
       - build_frontend_and_push_to_docker_hub
       - build_gateway_and_push_to_docker_hub
+<<<<<<< HEAD
     if: github.ref == 'refs/heads/master' or 'refs/heads/main'
+=======
+    if: 
+      contains('
+        refs/heads/master
+        refs/heads/main
+      ', github.ref)   
+>>>>>>> ac2961f672f39dd126caa16e490391d698078649
 
     steps:
     - name: Checkout repo 
